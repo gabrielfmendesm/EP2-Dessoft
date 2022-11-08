@@ -59,3 +59,24 @@ def sorteia_questao_inedida (dicionario, nivel, lista):
             lista.append (questao)
             break
     return (questao)
+
+def gera_ajuda (dicionario):
+    lista_erradas = []
+    lista_dicas = []
+    resposta_correta = dicionario['correta']
+    dicionario_questoes = dicionario['opcoes']
+    for e in dicionario_questoes.values():
+        if e != dicionario_questoes[resposta_correta]:
+            lista_erradas.append (e)
+    contador = random.choice (range (2))
+    contador += 1
+    for i in range (contador):
+        lista_dicas.append (random.choice (lista_erradas))
+    if len (lista_dicas) == 2:
+        if lista_dicas[0] == lista_dicas[1]:
+            del lista_dicas[1]
+    if len (lista_dicas) == 2:        
+        dica = (f'DICA:\nOpções certamente erradas: {lista_dicas[0]} | {lista_dicas[1]}')
+    else:
+        dica = (f'DICA:\nOpções certamente erradas: {lista_dicas[0]}')
+    return dica
