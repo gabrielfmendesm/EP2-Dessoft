@@ -51,3 +51,11 @@ def valida_questoes (lista):
 def sorteia_questao (dicionario, nivel):
     questao = random.choice (dicionario[nivel])
     return (questao)
+
+def sorteia_questao_inedida (dicionario, nivel, lista):
+    while True:  
+        questao = random.choice (dicionario[nivel])
+        if questao not in lista:
+            lista.append (questao)
+            break
+    return (questao)
