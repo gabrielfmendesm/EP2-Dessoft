@@ -82,3 +82,23 @@ def gera_ajuda (dicionario):
     else:
         dica = (f'DICA:\nOpções certamente erradas: {lista_dicas[0]}')
     return dica
+
+def questao_para_texto (dicionario, id):
+    return ('----------------------------------------'
+    '\n'
+    f"QUESTAO {id}"
+    '\n'
+    '\n'
+    f"{dicionario['titulo']}"
+    '\n'
+    '\n'
+    "RESPOSTAS:"
+    '\n'
+    f"A: {dicionario['opcoes'] ['A']}"
+    '\n'
+    f"B: {dicionario['opcoes']['B']}"
+    '\n'
+    f"C: {dicionario['opcoes']['C']}"
+    '\n'
+    f"D: {dicionario['opcoes']['D']}"
+    )
