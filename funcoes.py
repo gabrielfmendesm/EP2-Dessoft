@@ -40,3 +40,10 @@ def valida_questao (pergunta):
         if pergunta['correta'] not in ('A', 'B', 'C', 'D'):
             dicionario['correta'] = 'valor_errado'
     return dicionario
+
+def valida_questoes (lista):
+    lista_questoes = []
+    for i in lista:
+        validado = valida_questao(i)
+        lista_questoes.append(validado)
+    return lista_questoes
