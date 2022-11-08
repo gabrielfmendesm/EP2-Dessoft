@@ -1,3 +1,5 @@
+from random import *
+
 def transforma_base (lista):
     dicionario = {}
     for e in lista:
@@ -49,12 +51,12 @@ def valida_questoes (lista):
     return lista_questoes
 
 def sorteia_questao (dicionario, nivel):
-    questao = random.choice (dicionario[nivel])
+    questao = choice (dicionario[nivel])
     return (questao)
 
-def sorteia_questao_inedida (dicionario, nivel, lista):
+def sorteia_questao_inedita (dicionario, nivel, lista):
     while True:  
-        questao = random.choice (dicionario[nivel])
+        questao = choice (dicionario[nivel])
         if questao not in lista:
             lista.append (questao)
             break
@@ -68,10 +70,10 @@ def gera_ajuda (dicionario):
     for e in dicionario_questoes.values():
         if e != dicionario_questoes[resposta_correta]:
             lista_erradas.append (e)
-    contador = random.choice (range (2))
+    contador = choice (range (2))
     contador += 1
     for i in range (contador):
-        lista_dicas.append (random.choice (lista_erradas))
+        lista_dicas.append (choice (lista_erradas))
     if len (lista_dicas) == 2:
         if lista_dicas[0] == lista_dicas[1]:
             del lista_dicas[1]
