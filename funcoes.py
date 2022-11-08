@@ -47,3 +47,7 @@ def valida_questoes (lista):
         validado = valida_questao (i)
         lista_questoes.append (validado)
     return lista_questoes
+
+def sorteia_questao (dicionario, nivel):
+    questao = random.choice (dicionario[nivel])
+    return (questao)
