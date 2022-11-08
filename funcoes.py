@@ -44,6 +44,6 @@ def valida_questao (pergunta):
 def valida_questoes (lista):
     lista_questoes = []
     for i in lista:
-        validado = valida_questao(i)
-        lista_questoes.append(validado)
+        validado = valida_questao (i)
+        lista_questoes.append (validado)
     return lista_questoes
