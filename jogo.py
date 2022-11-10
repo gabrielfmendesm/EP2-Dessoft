@@ -36,19 +36,20 @@ print ('\n''O jogo já vai começar! Lá vem a primeira questão!''\n')
 inicio2 = input ('Vamos começar com questões do nível FACIL!''\n''Aperte ENTER para continuar...')
 while True:
     if inicio2 == '':
-        while True and id < 10:
-            if id < 3:
-                nivel_jogo = 'facil'
-            elif id < 7:
-                nivel_jogo = 'medio'
-            else:
-                nivel_jogo = 'dificil'
-            print ('\n''\n')
-            if repetidor_pergunta == False:
-                questao_escolhida = sorteia_questao_inedita (lista_base_processada, nivel_jogo, lista_questoes)
-                texto_da_questao_escolhida = questao_para_texto (questao_escolhida, id)
-            print (texto_da_questao_escolhida)
-            resposta_questao = input ('Qual sua resposta?! ')
-            if resposta_questao != 'A' and resposta_questao != 'B' and resposta_questao != 'C' and resposta_questao != 'D':
-                print ('Opção inválida!')
-                print ('As opções de resposta são "A", "B", "C", "D", "ajuda", "pula" e "parar"!')
+        break
+    while True and id < 10:
+    if id < 3:
+        nivel_jogo = 'facil'
+    elif id < 7:
+        nivel_jogo = 'medio'
+    else:
+        nivel_jogo = 'dificil'
+    print ('\n''\n')
+    if repetidor_pergunta == False:
+        questao_escolhida = sorteia_questao_inedita (lista_base_processada, nivel_jogo, lista_questoes)
+        texto_da_questao_escolhida = questao_para_texto (questao_escolhida, id)
+    print (texto_da_questao_escolhida)
+    resposta_questao = input ('Qual sua resposta?! ')
+    if resposta_questao != 'A' and resposta_questao != 'B' and resposta_questao != 'C' and resposta_questao != 'D':
+        print ('Opção inválida!')
+        print ('As opções de resposta são "A", "B", "C", "D", "ajuda", "pula" e "parar"!')
