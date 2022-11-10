@@ -37,7 +37,7 @@ inicio2 = input ('Vamos começar com questões do nível FACIL!''\n''Aperte ENTE
 while True:
     if inicio2 == '':
         break
-    while True and id < 10:
+while True and id < 10:
     if id < 3:
         nivel_jogo = 'facil'
     elif id < 7:
