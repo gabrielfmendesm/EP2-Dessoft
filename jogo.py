@@ -28,4 +28,10 @@ while True:
         while True:
             if inicio2 == '':
                 while True and id < 10:
-                    print 
+                    if id < 3:
+                        nivel_jogo = 'facil'
+                    elif id < 7:
+                        nivel_jogo = 'medio'
+                    else:
+                        nivel_jogo = 'dificil'
+
