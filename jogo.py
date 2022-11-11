@@ -34,9 +34,13 @@ while True:
 # jogo iniciando
 print ('\n''O jogo já vai começar! Lá vem a primeira questão!''\n')
 inicio2 = input ('Vamos começar com questões do nível FACIL!''\n''Aperte ENTER para continuar...')
+
+# iniciando as questões
 while True:
     if inicio2 == '':
         break
+
+
 while True and id < 10:
     if id < 3:
         nivel_jogo = 'facil'
@@ -53,3 +57,11 @@ while True and id < 10:
     if resposta_questao != 'A' and resposta_questao != 'B' and resposta_questao != 'C' and resposta_questao != 'D':
         print ('Opção inválida!')
         print ('As opções de resposta são "A", "B", "C", "D", "ajuda", "pula" e "parar"!')
+    if resposta_questao == questao_escolhida ['correta']:
+        if id < 9:
+            print (f'Você acertou! Seus prêmio atual é de R$ {lista_premios [id]}')
+        if id == 3:
+            print ('\n' 'HEY! Você passou para o nivel MEDIO!')
+        if id == 6:
+            print ('\n' 'HEY! Você passou para o nivel DIFICIL!')
+        id += 1
