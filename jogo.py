@@ -8,8 +8,6 @@ lista_questoes = []
 
 # variáveis iniciais
 id = 1
-pulos = 3
-ajudas = 2
 
 # repetidores
 repetidor_pergunta = False
